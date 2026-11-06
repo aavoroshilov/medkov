@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Род Медковых из Юренева</title>
+<style>
+@page { size:A4; margin:16mm 17mm; }
+:root {
+ --paper:#ffffff; --canvas:#eeeae6; --ink:#242323; --muted:#625d5a; --line:#d5cfca;
+ --accent:#812f34; --accent-soft:#f8efed; --soft:#f6f3f0;
+ --ok:#285d39; --ok-bg:#eaf2e9; --maybe:#725011; --maybe-bg:#faf0d9;
+ --no:#842f34; --no-bg:#f8e9e7; --family:#344f70; --family-bg:#eaf0f7;
+ --sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans","Noto Sans Armenian","Noto Sans Georgian","Noto Sans Hebrew","DejaVu Sans",Arial,sans-serif;
+ --serif:Georgia,"Times New Roman","Noto Serif","Noto Serif Armenian","Noto Serif Georgian","Noto Serif Hebrew","DejaVu Serif","Sylfaen",serif; --tree-gap:40px;
+ color-scheme:light;
+}
+* { box-sizing:border-box; }
+html { scroll-padding-top:24px; }
+body { margin:0; background:var(--canvas); color:var(--ink); font:1.0625rem/1.75 var(--serif); }
+a { color:var(--accent); text-underline-offset:3px; text-decoration-thickness:1px; }
+a:hover { text-decoration-thickness:2px; }
+a:focus-visible,summary:focus-visible,.table-wrap:focus-visible { outline:3px solid var(--accent); outline-offset:5px; }
+.report-shell { max-width:1180px; margin:32px auto; background:var(--paper); border-top:7px solid var(--ink); }
+.report-topline { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px 20px; padding:17px 52px; border-bottom:1px solid var(--ink); color:var(--muted); font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.12em; }
+.report-header { padding:40px 52px 32px; border-bottom:1px solid var(--ink); }
+.report-intro { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr); gap:0 48px; align-items:start; }
+.eyebrow { margin:0 0 10px; grid-column:1; font:600 .75rem/1.5 var(--sans); letter-spacing:.16em; text-transform:none; color:var(--accent); }
+h1 { overflow-wrap:anywhere; grid-column:1; font:400 clamp(3rem,7vw,5.75rem)/1.03 var(--serif); letter-spacing:normal; margin:0 0 16px; text-wrap:balance; }
+.subtitle { grid-column:1; font:1.125rem/1.55 var(--serif); max-width:42ch; color:var(--muted); margin:0 0 24px; }
+.report-meta { grid-column:2; grid-row:2/4; margin:6px 0 0; display:grid; gap:16px; padding-left:24px; border-left:1px solid var(--line); font:.8125rem/1.7 var(--sans); }
+.report-meta dt { font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.06em; color:var(--muted); margin:0 0 3px; }
+.report-meta dd { margin:0; }
+.demo-note { grid-column:1/-1; padding:12px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font:.75rem/1.65 var(--sans); color:var(--muted); }
+.demo-note strong { color:var(--ink); }
+.family-tree { margin:30px auto 0; width:100%; max-width:780px; min-width:0; }
+.tree-heading { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px 20px; margin-bottom:16px; }
+.tree-heading h2 { font:400 1.75rem/1.3 var(--serif); color:var(--ink); letter-spacing:-.025em; border:0; padding:0; margin:0; }
+.tree-heading>span { color:var(--muted); font:.75rem/1.5 var(--sans); }
+.tree-row { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--tree-gap); }
+.person-card { min-width:0; overflow-wrap:anywhere; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 12px; padding:10px 14px 12px; border:0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--paper); text-decoration:none; transition:background-color 160ms ease; }
+a.person-card:hover { background:var(--accent-soft); }
+.person-role { grid-column:1/-1; color:var(--muted); font:600 .75rem/1.4 var(--sans); letter-spacing:.07em; text-transform:none; }
+.person-name { grid-column:1/-1; color:var(--ink); font:400 1.375rem/1.3 var(--serif); letter-spacing:normal; overflow-wrap:anywhere; }
+.person-years { color:var(--muted); font:.75rem/1.6 var(--sans); font-variant-numeric:tabular-nums; }
+.person-status { color:var(--accent); font:600 .75rem/1.6 var(--sans); }
+.person-card.subject { background:var(--accent-soft); border-top:3px solid var(--accent); border-bottom:1px solid var(--accent); padding-top:8px; }
+.person-card.subject .person-role { color:var(--accent); }
+.person-card.subject .person-status { grid-column:1/-1; font-weight:400; color:var(--muted); }
+.spouse-group { position:relative; }
+.spouse-group::before { content:""; position:absolute; top:50%; left:calc(50% - var(--tree-gap)/2); width:var(--tree-gap); height:4px; border-top:1px solid var(--accent); border-bottom:1px solid var(--accent); }
+.tree-connectors { position:relative; width:100%; height:24px; color:var(--accent); }
+.tree-connectors::before { content:""; position:absolute; top:0; bottom:0; left:calc(25% - var(--tree-gap)/4); border-left:1px solid currentColor; }
+.mother-branch { position:absolute; top:0; left:calc(25% - var(--tree-gap)/4); width:calc(50% + var(--tree-gap)/2); height:10px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; }
+.child-row .person-card { grid-column:1; }
+.tree-caption { font:.75rem/1.65 var(--sans); color:var(--muted); margin-top:14px; }
+.tree-caption span { display:block; margin-top:4px; }
+.report-nav { display:flex; flex-wrap:wrap; gap:4px 32px; margin:0 52px; padding:6px 0; border-bottom:1px solid var(--ink); font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.06em; }
+.report-nav a { min-height:44px; display:inline-flex; align-items:center; text-decoration:none; }
+.report-nav a:hover { text-decoration:underline; }
+main { max-width:900px; padding:36px 52px 44px; margin:0 auto; }
+h2 { margin:44px 0 18px; padding:14px 0 0; border-top:1px solid var(--ink); color:var(--ink); font:400 clamp(1.625rem,3vw,2rem)/1.3 var(--serif); letter-spacing:-.025em; break-after:avoid; text-wrap:balance; }
+h3 { margin:28px 0 14px; color:var(--accent); font:600 .875rem/1.5 var(--sans); letter-spacing:.04em; }
+p { margin:0 0 18px; }
+p,li,td { overflow-wrap:break-word; }
+main>p { max-width:72ch; }
+.lead { padding:22px 24px 24px; background:var(--soft); border-top:3px solid var(--accent); border-bottom:1px solid var(--line); margin-bottom:24px; }
+.lead h2 { margin:0 0 14px; padding:0; border:0; color:var(--accent); font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.12em; }
+.lead ul { margin:0; padding-left:18px; }
+.lead li { margin-bottom:12px; }
+.lead li:last-child { margin-bottom:0; }
+.tag { display:inline-block; max-width:100%; padding:2px 7px; margin:2px 0; border-radius:2px; font:600 .75rem/1.5 var(--sans); white-space:nowrap; }
+.ok { color:var(--ok); background:var(--ok-bg); }
+.maybe { color:var(--maybe); background:var(--maybe-bg); }
+.no { color:var(--no); background:var(--no-bg); }
+.fam { color:var(--family); background:var(--family-bg); }
+.evidence-guide { border-bottom:1px solid var(--line); color:var(--muted); margin:0 0 30px; font:.8125rem/1.7 var(--sans); }
+.evidence-guide h3 { padding:12px 0 0; margin:0; font:600 .8125rem/1.7 var(--sans); color:var(--ink); letter-spacing:normal; }
+.legend { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 24px; padding:8px 0 18px; }
+.legend .tag { display:table; margin-bottom:4px; }
+.table-wrap { max-width:100%; overflow-x:auto; margin:16px 0 20px; }
+table { width:100%; border-collapse:collapse; font:.875rem/1.65 var(--sans); }
+th,td { text-align:start; vertical-align:top; border-bottom:1px solid var(--line); padding:12px 16px 12px 0; }
+th { color:var(--muted); font:600 .75rem/1.5 var(--sans); text-transform:none; letter-spacing:.04em; border-bottom:1px solid var(--ink); }
+th:last-child,td:last-child { padding-right:0; }
+td.d { width:18%; min-width:90px; }
+td.t { width:17%; }
+tr { break-inside:avoid; }
+tr:target { background:var(--accent-soft); }
+blockquote { margin:28px 0; padding:2px 0 2px 20px; border-left:2px solid var(--accent); color:var(--accent); font:italic 1.375rem/1.5 var(--serif); }
+ol,ul { margin:0 0 22px; padding-left:22px; }
+li { margin-bottom:10px; }
+.small { color:var(--muted); font:.8125rem/1.65 var(--sans); }
+.src li { color:var(--muted); font:.8125rem/1.75 var(--sans); margin-bottom:18px; padding-left:4px; }
+.src li b { color:var(--ink); }
+:target { scroll-margin-top:24px; }
+.report-footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding:20px 52px; border-top:1px solid var(--ink); color:var(--muted); font:.75rem/1.5 var(--sans); }
+.skip-link { position:absolute; top:8px; left:8px; padding:12px 16px; z-index:10; background:var(--paper); transform:translateY(-200%); font:1rem/1.5 var(--sans); }
+.skip-link:focus { transform:translateY(0); }
+@media(max-width:959px) {
+ .report-shell { margin:16px; }
+ .report-header { padding:32px; }
+ .report-topline,.report-footer { padding-left:32px; padding-right:32px; }
+ .report-nav { margin-left:32px; margin-right:32px; }
+ .report-intro { gap:0 24px; }
+ .person-card { display:flex; flex-direction:column; gap:4px; }
+ main { padding:32px; }
+}
+@media(max-width:600px) {
+ :root { --tree-gap:20px; }
+ body { font-size:1rem; }
+ .report-shell { margin:0; border-top-width:5px; }
+ .report-topline { padding:13px 20px; font-size:.75rem; letter-spacing:.06em; }
+ .report-header { padding:24px 20px; }
+ .report-intro { display:block; }
+ h1 { font-size:3rem; }
+ .subtitle { font-size:1rem; margin-bottom:18px; }
+ .report-meta { display:flex; flex-wrap:wrap; gap:10px 24px; padding:0; margin:0 0 18px; border:0; }
+ .demo-note { font-size:.75rem; }
+ .family-tree { margin-top:24px; }
+ .tree-heading { align-items:start; }
+ .tree-heading h2 { font-size:1.5rem; }
+ .person-card { padding:10px; }
+ .person-name { font-size:1.125rem; }
+ .person-role { letter-spacing:.03em; }
+ .person-card.subject { padding-top:8px; }
+ .tree-connectors { height:22px; }
+ .tree-caption { font-size:.75rem; }
+ .report-nav { margin:0 20px; gap:4px 20px; letter-spacing:.02em; }
+ main { padding:24px 20px; }
+ .lead { padding:20px; }
+ .legend { grid-template-columns:1fr; }
+ h2 { margin-top:36px; }
+ table { min-width:560px; }
+ th,td { padding-right:12px; }
+ .report-footer { padding:20px; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none !important; scroll-behavior:auto !important; } }
+@media print {
+ body { background:white; font-size:10.5pt; }
+ .report-shell { max-width:none; margin:0; border:0; }
+ .report-topline,.report-footer { padding:8pt 0; font-size:8pt; }
+ .report-header { padding:16pt 0; }
+ .report-intro { gap:0 24pt; }
+ h1 { font-size:34pt; }
+ .subtitle { font-size:11pt; }
+ .demo-note { font-size:8pt; }
+ .family-tree { max-width:145mm; margin-top:18pt; break-inside:avoid; }
+ .person-card { padding:8pt; }
+ .person-name { font-size:12pt; }
+ .person-role,.person-years,.person-status,.tree-caption { font-size:8pt; }
+ .report-nav,.skip-link { display:none; }
+ main { padding:0; }
+ h2 { font-size:16pt; margin-top:20pt; }
+ .table-wrap { overflow:visible; }
+ table { min-width:0; font-size:8.5pt; }
+ th { font-size:8pt; }
+ .evidence-guide { break-inside:avoid; font-size:8.5pt; }
+ .legend { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ a { color:inherit; }
+ .person-card.subject { background:white; }
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#1d1b1a; --canvas:#131211; --ink:#ebe5e0; --muted:#a69e98; --line:#3b3633;
+ --accent:#e3989a; --accent-soft:#2d2121; --soft:#23201e;
+ --ok:#93d0a2; --ok-bg:#1c2d21; --maybe:#e5c27c; --maybe-bg:#33291a;
+ --no:#f0a0a0; --no-bg:#392325; --family:#a2bfe2; --family-bg:#1e2836; color-scheme:dark; } }
+:root[data-theme="dark"] { --paper:#1d1b1a; --canvas:#131211; --ink:#ebe5e0; --muted:#a69e98; --line:#3b3633;
+ --accent:#e3989a; --accent-soft:#2d2121; --soft:#23201e;
+ --ok:#93d0a2; --ok-bg:#1c2d21; --maybe:#e5c27c; --maybe-bg:#33291a;
+ --no:#f0a0a0; --no-bg:#392325; --family:#a2bfe2; --family-bg:#1e2836; color-scheme:dark; }
+/* Local font fallbacks retain multilingual text without network requests. */
+bdi { unicode-bidi:isolate; }
+html :lang(ar), html :lang(he), html :lang(yi), html :lang(ka), html :lang(hy) { letter-spacing:normal; }
+.report-note { grid-column:1/-1; color:var(--muted); font:.8125rem/1.65 var(--sans); }
+.tree-connectors.uncertain::before { border-left-style:dashed; }
+.mother-branch.uncertain { border-right-style:dashed; border-bottom-style:dashed; }
+.spouse-group.uncertain::before { border-top-style:dashed; border-bottom-style:dashed; }
+.photos { display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start; }
+.photos figure { margin:0; }
+figure img { display:block; max-width:100%; height:auto; }
+figcaption { font:.8125rem/1.65 var(--sans); color:var(--muted); margin-top:8px; }
+.docfig { margin:24px 0; break-inside:avoid; }
+.docfig img { width:100%; max-height:225mm; object-fit:contain; border:1px solid var(--line); }
+@media screen { .pb { break-before:auto; } .docfig img { max-height:none; } }
+@media print { .pb { break-before:page; } .tag { white-space:normal; } }
+
+.person-card .person-years,.person-card .person-status { grid-column:1/-1; }
+
+/* Gallery */
+.gallery { margin:28px 0 8px; }
+.gallery-head { font:600 .8125rem/1.5 var(--sans); letter-spacing:.06em; color:var(--accent); margin:0 0 12px; }
+.gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+.shot { margin:0; }
+.shot img { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; background:var(--soft); border:1px solid var(--line); }
+.shot figcaption { margin-top:6px; font:.8125rem/1.5 var(--sans); color:var(--muted); }
+.shot figcaption b { color:var(--ink); font-weight:600; }
+.gallery .small { margin-top:12px; }
+/* Phones */
+@media (max-width:600px) {
+ h1 { font-size:2.35rem; line-height:1.08; }
+ .eyebrow,.report-topline { letter-spacing:.04em; }
+ .report-nav { flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; gap:4px 18px; }
+ .report-nav a { white-space:nowrap; }
+ .tree-row,.tree-row.spouse-group { grid-template-columns:1fr; gap:0; }
+ .spouse-group::before { display:none; }
+ .spouse-group > .person-card + .person-card { border-top:0; padding-top:2px; padding-left:28px; }
+ .spouse-group > .person-card + .person-card .person-role::before { content:"и "; color:var(--accent); }
+ .tree-row:not(.spouse-group) > .person-card + .person-card { margin-top:10px; }
+ .tree-connectors { height:18px; }
+ .tree-connectors::before { left:22px; }
+ .person-name { font-size:1.1875rem; }
+ .gallery-grid { gap:8px; }
+ .shot figcaption { font-size:.75rem; }
+ .table-wrap { overflow-x:visible; }
+ table { min-width:0; }
+ table thead { display:none; }
+ table, table tbody, table tr, table td { display:block; width:auto; }
+ table tr { padding:12px 0; border-bottom:1px solid var(--line); }
+ table td { border:0; padding:2px 0; }
+ table td.d, table td.t { width:auto; min-width:0; }
+ table td[data-label]:not([data-label=""])::before { content:attr(data-label); display:block; font:600 .6875rem/1.6 var(--sans); letter-spacing:.05em; color:var(--muted); }
+ table td:first-child { font-weight:600; }
+ .lead { padding:18px 16px; }
+ main { padding-left:16px; padding-right:16px; }
+ .report-header { padding-left:16px; padding-right:16px; }
+ .report-nav { margin-left:16px; margin-right:16px; }
+ .report-topline,.report-footer { padding-left:16px; padding-right:16px; }
+}
+@media (min-width:601px) and (max-width:900px) {
+ .gallery-grid { gap:10px; }
+}
+
+[hidden] { display:none !important; }
+.docs-group { margin-top:34px; }
+.doc { margin:18px 0 26px; display:grid; gap:8px; }
+.doc-crop { display:block; border:1px solid var(--line); background:var(--soft); cursor:zoom-in; }
+.doc-crop img { display:block; width:100%; height:auto; }
+.doc figcaption { font:.875rem/1.6 var(--sans); color:var(--muted); }
+.doc figcaption b { color:var(--ink); }
+.doc-links { display:block; margin-top:4px; }
+.doc-ref { color:var(--muted); }
+.imgref { white-space:nowrap; font:.75rem/1 var(--sans); }
+.imgref a { margin-left:6px; }
+.transcript { margin-top:6px; padding:16px 18px; background:var(--soft); border-top:2px solid var(--accent); font:.9375rem/1.65 var(--serif); }
+.transcript-title,.transcript-sub { margin:0 0 10px; font:600 .8125rem/1.5 var(--sans); color:var(--accent); letter-spacing:.04em; }
+.transcript-sub { margin-top:16px; }
+.transcript dl { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.4fr); gap:6px 16px; margin:0; }
+.transcript dt { color:var(--muted); font:.8125rem/1.5 var(--sans); }
+.transcript dd { margin:0; }
+.transcript p { margin:0 0 10px; max-width:70ch; }
+.transcript-sign { font-style:italic; }
+.lb-overlay { position:fixed; inset:0; z-index:60; display:flex; flex-direction:column; background:rgba(12,11,10,.94); padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+.lb-bar { display:flex; align-items:center; gap:8px; padding:10px 16px; color:#f1ece7; font:.875rem/1.4 var(--sans); }
+.lb-bar span { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.lb-bar button { font:600 .8125rem/1 var(--sans); padding:10px 14px; min-height:40px; border:1px solid rgba(255,255,255,.35); background:transparent; color:#f1ece7; border-radius:3px; cursor:pointer; }
+.lb-bar button:focus-visible { outline:2px solid #fff; outline-offset:2px; }
+.lb-stage { flex:1; min-height:0; overflow:auto; display:flex; align-items:center; justify-content:center; padding:0 12px 12px; -webkit-overflow-scrolling:touch; }
+.lb-stage img { max-width:100%; max-height:100%; object-fit:contain; cursor:zoom-in; background:#fff; }
+.lb-stage.zoom { display:block; }
+.lb-stage.zoom img { max-width:none; max-height:none; cursor:zoom-out; }
+@media (max-width:600px) {
+ .transcript dl { grid-template-columns:1fr; gap:0; }
+ .transcript dd { margin-bottom:8px; }
+ .transcript { padding:14px; }
+}
+</style>
+</head>
+<body>
+
+
+<a class="skip-link" href="#report-content">К тексту отчёта</a>
+<div class="report-shell">
+<div class="report-topline"><span>Семейная история · Исследование</span><span>Составлено 6 ноября 2026</span></div>
+<header class="report-header" id="top">
+  <div class="report-intro">
+    <p class="eyebrow">Семейная история по документам</p>
+    <h1><bdi dir="auto">Медков Николай Сергеевич</bdi></h1>
+    <p class="subtitle">Род Медковых из деревни Юренево Волоколамского уезда: предки по мужской линии до 1760-х годов, родня матери Николая (Лизы) и братья.</p>
+    <dl class="report-meta">
+      <div><dt>Период исследования</dt><dd>1795–1945 по документам; 1928–2019 по сведениям семьи</dd></div>
+      <div><dt>Основания</dt><dd>Ревизские сказки 1811 и 1816 годов, исповедные ведомости 1819–1865, метрические книги 1830–1904 (ЦГА Москвы, ЦГАМО через Яндекс Поиск по архивам), документы «Памяти народа», сведения семьи</dd></div>
+    </dl>
+    <p class="report-note">Записи ЗАГС Волоколамского и Шаховского районов после 1926 года онлайн нет. Поэтому рождение Николая (1928) и брак его родителей по документам не проверены, они известны со слов семьи.</p>
+  </div>
+  <figure class="family-tree" aria-labelledby="tree-title" aria-describedby="tree-description">
+    <div class="tree-heading"><h2 id="tree-title">Семейное древо</h2><span>Прямая мужская линия, по одной паре на поколение</span></div>
+
+    <div class="tree-row spouse-group">
+      <a class="person-card" href="#rel-ivan-karpov">
+        <span class="person-role">4×прадед</span>
+        <bdi class="person-name" dir="auto">Иван Карпович</bdi>
+        <span class="person-years">ок. 1767 — между 1822 и 1825</span>
+        <span class="person-status">подтверждено</span>
+      </a>
+      <a class="person-card" href="#rel-ivan-karpov">
+        <span class="person-role">4×прабабка</span>
+        <bdi class="person-name" dir="auto">Домна Егоровна</bdi>
+        <span class="person-years">ок. 1768–1772 — после 1835</span>
+        <span class="person-status">подтверждено</span>
+      </a>
+    </div>
+    <div class="tree-connectors" aria-hidden="true"></div>
+    <div class="tree-row spouse-group">
+      <a class="person-card" href="#rel-yakov">
+        <span class="person-role">3×прадед</span>
+        <bdi class="person-name" dir="auto">Яков Иванович</bdi>
+        <span class="person-years">ок. 1797 — 1855–1862</span>
+        <span class="person-status">подтверждено</span>
+      </a>
+      <a class="person-card" href="#rel-yakov">
+        <span class="person-role">3×прабабка</span>
+        <bdi class="person-name" dir="auto">Праскева Антоновна</bdi>
+        <span class="person-years">ок. 1798 — после 1865</span>
+        <span class="person-status">по документу</span>
+      </a>
+    </div>
+    <div class="tree-connectors" aria-hidden="true"></div>
+    <div class="tree-row spouse-group">
+      <a class="person-card" href="#rel-nikita">
+        <span class="person-role">Прапрадед</span>
+        <bdi class="person-name" dir="auto">Никита Яковлевич Медков</bdi>
+        <span class="person-years">род. 10.09.1830</span>
+        <span class="person-status">подтверждено</span>
+      </a>
+      <a class="person-card" href="#rel-nikita">
+        <span class="person-role">Прапрабабка</span>
+        <bdi class="person-name" dir="auto">Александра Ивановна</bdi>
+        <span class="person-years">ок. 1831</span>
+        <span class="person-status">по документу</span>
+      </a>
+    </div>
+    <div class="tree-connectors" aria-hidden="true"></div>
+    <div class="tree-row spouse-group">
+      <a class="person-card" href="#rel-ivan">
+        <span class="person-role">Прадед</span>
+        <bdi class="person-name" dir="auto">Иван Никитич Медков</bdi>
+        <span class="person-years">ок. 1862–1864; брак 1889</span>
+        <span class="person-status">подтверждено</span>
+      </a>
+      <a class="person-card" href="#rel-anna">
+        <span class="person-role">Прабабка</span>
+        <bdi class="person-name" dir="auto">Анна Адриановна</bdi>
+        <span class="person-years">ок. 1869, из с. Раменье</span>
+        <span class="person-status">по документу</span>
+      </a>
+    </div>
+    <div class="tree-connectors" aria-hidden="true"></div>
+    <div class="tree-row spouse-group uncertain">
+      <a class="person-card" href="#rel-sergey">
+        <span class="person-role">Отец</span>
+        <bdi class="person-name" dir="auto">Сергей Иванович Медков</bdi>
+        <span class="person-years">род. 5.08.1897; воевал 1941–1945</span>
+        <span class="person-status">вероятно</span>
+      </a>
+      <a class="person-card" href="#rel-liza">
+        <span class="person-role">Мать</span>
+        <bdi class="person-name" dir="auto">Елизавета Семёновна (Лиза)</bdi>
+        <span class="person-years">вероятно род. 12.10.1904, д. Петровская</span>
+        <span class="person-status">вероятно</span>
+      </a>
+    </div>
+    <div class="tree-connectors uncertain" aria-hidden="true"></div>
+    <div class="tree-row">
+      <div class="person-card subject">
+        <span class="person-role">Основной человек</span>
+        <bdi class="person-name" dir="auto">Николай Сергеевич Медков</bdi>
+        <span class="person-years">19.12.1928 — май 2019</span>
+        <span class="person-status">Старший из семи(?) детей.</span>
+      </div>
+      <a class="person-card" href="#rel-brothers">
+        <span class="person-role">Братья</span>
+        <bdi class="person-name" dir="auto">Леонид, Виктор, Валентин Сергеевичи</bdi>
+        <span class="person-years">годы не устанавливались</span>
+        <span class="person-status">Виктор — подтверждено; Леонид, Валентин — со слов семьи</span>
+      </a>
+    </div>
+    <figcaption class="tree-caption" id="tree-description">Сверху вниз — поколения от Ивана Карповича до Николая Сергеевича. Двойная линия обозначает брак. Пунктир — звенья, которые держатся на сведениях семьи и сопоставлении, без прямого документа. Нажмите на карточку, чтобы перейти к основаниям связи.<span>Отец Ивана Карповича известен только по отчеству — Карп. Родители Лизы и её деды показаны ниже, в разделе «Род Лизы».</span></figcaption>
+  </figure>
+</header>
+<nav class="report-nav" aria-label="Разделы отчёта"><a href="#findings">Главное</a><a href="#family-connections">Цепочка родства</a><a href="#liza">Род Лизы</a><a href="#medkovs">Медковы Юренева</a><a href="#documents">Документы</a><a href="#chronology">Хронология</a><a href="#sources">Источники</a></nav>
+<main id="report-content">
+
+<div class="lead" id="findings">
+  <h2>Главное</h2>
+  <ul>
+    <li><b>Род Медковых по прямой линии прослежен на шесть поколений вверх от Николая, до Ивана Карповича (около 1767 г.).</b> Все они — крестьяне сельца Юренево Волоколамского уезда (прихожане Троицкой церкви села Никольского). До 1861 года они были крепостными: до начала 1830-х — помещиков Зариных, затем Смирнова. <span class="tag ok">подтверждено</span></li>
+    <li><b>Прапрадед — Никита Яковлевич, родился 10 сентября 1830 года.</b> Его отец — Яков Иванович, мать — Праскева Антоновна. В одном дворе жили два родных брата с одинаковым именем «Яков Иванов». Наш Яков — старший, его жену звали Праскева Антоновна. Различить братьев удалось только по жёнам в исповедных ведомостях. <span class="tag ok">подтверждено</span></li>
+    <li><b>Прадед — Иван Никитич Медков, родился около 1862–1864 годов.</b> В 1889 году, служа рядовым 94-го пехотного Енисейского полка, он женился на Анне, дочери крестьянина Адриана Матвеева из села Раменье. Их сын Сергий родился 5 августа 1897 года. <span class="tag ok">подтверждено</span></li>
+    <li><b>Сергей Иванович Медков 1897 г. р., живший в Ханеве и воевавший до Кёнигсберга, — по всей видимости, тот самый Сергий из Юренева.</b> Совпадают имя, отчество, фамилия и год рождения. Документа, прямо связывающего эти записи, нет. <span class="tag maybe">вероятно</span></li>
+    <li><b>Мать Николая, Лиза, — по всей видимости, Елизавета Симеоновна Филиппова, родившаяся 12 октября 1904 года в деревне Петровской.</b> Её родители — Симеон Филиппович Филиппов (1869) и Феодосия Христофоровна (около 1872). <span class="tag maybe">вероятно</span></li>
+    <li><b>Братья Николая — Леонид, Виктор и Валентин.</b> Виктор назван в документах вместе с Николаем. Леонид и Валентин известны со слов семьи. <span class="tag ok">Виктор — подтверждено</span> <span class="tag fam">Леонид, Валентин — по сведениям семьи</span></li>
+  </ul>
+</div>
+
+<aside class="evidence-guide" aria-labelledby="evidence-guide-title">
+  <h3 id="evidence-guide-title">Как читать метки надёжности</h3>
+  <div class="legend">
+    <div><span class="tag ok">подтверждено</span> — две независимые группы документов (например, метрика и исповедные ведомости)</div>
+    <div><span class="tag ok">по документу</span> — один прямой документ</div>
+    <div><span class="tag fam">по сведениям семьи</span> — рассказ родственников, документа нет</div>
+    <div><span class="tag maybe">вероятно</span> — сопоставление, прямого документа нет</div>
+    <div><span class="tag no">не установлено</span> — сведений пока недостаточно</div>
+    <div><span class="tag no">есть противоречия</span> — источники расходятся; описано ниже</div>
+  </div>
+</aside>
+
+<h2>Кто он</h2>
+<p>Николай Сергеевич Медков родился 19 декабря 1928 года и был старшим из детей Сергея Ивановича и Елизаветы Семёновны. Он был военным: какое-то время служил в Восточной Германии, потом перевёлся в Беларусь. Жил в Минске, умер в мае 2019 года. <span class="tag fam">по сведениям семьи</span></p>
+<p>Его отец Сергей Иванович Медков (1897) перед войной жил в селе Ханево Волоколамского района. В 1941 году его призвал Волоколамский райвоенкомат. Весной 1945 года гвардии красноармеец Медков, орудийный номер 13-й гвардейской артиллерийской бригады РГК, был представлен к медали «За боевые заслуги» за бои под Кёнигсбергом. <span class="tag ok">по документу</span> <a href="#source-a0001">[1]</a><span class="imgref"><a class="lb" href="artifacts/A-0001_volokolamsk-rvk-1943_row229_crop.png" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0001_volokolamsk-rvk-1943_p345_full.jpg" data-cap="Полный разворот">скан</a></span> <a href="#source-a0002">[2]</a><span class="imgref"><a class="lb" href="artifacts/A-0002_award_fields.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0002_award-sheet-1945_full.jpg" data-cap="Полный разворот">скан</a></span></p>
+
+<figure class="gallery" aria-labelledby="gallery-title">
+  <figcaption class="gallery-head" id="gallery-title">Николай Сергеевич в разные годы</figcaption>
+  <div class="gallery-grid">
+    <figure class="shot"><img src="photos/03_Nikolai_fragment.jpg" alt="Николай Сергеевич около 1990–1991 года, у дома" loading="lazy"><figcaption><b>Около 1990–1991</b> · около 62 лет</figcaption></figure>
+    <figure class="shot"><img src="photos/02_Nikolai_fragment.jpg" alt="Николай Сергеевич около 1996 года, в голубой рубашке и галстуке" loading="lazy"><figcaption><b>Около 1996</b> · около 67 лет</figcaption></figure>
+    <figure class="shot shot-main"><img src="photos/01_Nikolai_2010_gallery.jpg" alt="Николай Сергеевич в августе 2010 года, в очках и синей рубашке" loading="lazy"><figcaption><b>Август 2010</b> · около 81 года</figcaption></figure>
+  </div>
+  <p class="small">Семейный архив.</p>
+</figure>
+
+<h2 id="family-connections">Цепочка родства от Ивана Карповича до Николая</h2>
+<p>По одному звену в строке, сверху вниз — от самого раннего известного предка к Николаю.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Таблица связей; при необходимости прокручивается"><table>
+  <thead><tr><th scope="col">Связь</th><th scope="col">Чем подтверждается</th><th scope="col">Надёжность</th></tr></thead>
+  <tbody>
+    <tr id="rel-karp"><td data-label="Связь">Карп → Иван Карпович и Афонасий Карпович</td><td data-label="Чем подтверждается">Известен только по отчеству сыновей. В ревизии 1811 года Карпа в семье уже нет: «Афонасей, Иван Карповы», по прошлой ревизии 1795 года им 35 и 28 лет. <a href="#source-a0034">[3]</a><span class="imgref"><a class="lb" href="artifacts/A-0034_revizia1811_Afonasei_Ivan_Karpovy.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0034_revizia1811_d11_scan599_full.jpg" data-cap="Полный разворот">скан</a></span></td><td data-label="Надёжность" class="t"><span class="tag no">не установлено</span></td></tr>
+    <tr id="rel-ivan-karpov"><td data-label="Связь">Иван Карпович и Домна Егоровна → Яков Иванович (~1797)</td><td data-label="Чем подтверждается">Ревизия 1811: «Ивановы дети: Иван, Яков, Кирила, Яков, Дарафей» <a href="#source-a0034">[3]</a><span class="imgref"><a class="lb" href="artifacts/A-0034_revizia1811_Afonasei_Ivan_Karpovy.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0034_revizia1811_d11_scan599_full.jpg" data-cap="Полный разворот">скан</a></span>. Ревизия 1816: «Ивана Карпова сыновья…», «Ивана Карпова жена Домна», «Якова Иванова жена Прасковья» <a href="#source-a0027">[4]</a><span class="imgref"><a class="lb" href="artifacts/A-0027_revizia1816_semya6_muzh.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0027_revizia1816_d78_scan224_full.jpg" data-cap="Полный разворот">скан</a></span>. Исповедная ведомость 1819: «Иванова жена Домна Егорова, дети их: Яков, Кирила, Яков, Дорофей; Яковлева жена Праскева Антонова» <a href="#source-a0029">[5]</a><span class="imgref"><a class="lb" href="artifacts/A-0029_ispoved1819_Yurenevo_dvor160_Karpovy.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0029_ispoved1819_f207_d3019_scan17_full.jpg" data-cap="Полный разворот">скан</a></span></td><td data-label="Надёжность" class="t"><span class="tag ok">подтверждено</span></td></tr>
+    <tr id="rel-yakov"><td data-label="Связь">Яков Иванович (старший) и Праскева Антоновна → Никита (1830)</td><td data-label="Чем подтверждается">Метрика: 10 сентября 1830 года «у крестьянина Якова Иванова родился сын Никита» <a href="#source-a0032">[6]</a><span class="imgref"><a class="lb" href="artifacts/A-0032_MK1830_Nikita_birth.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0032_MK1830_d1330_scan755_full.jpg" data-cap="Полный разворот">скан</a></span>. Исповедные ведомости 1835–1865: Никита — среди детей «1-го Иакова», жена которого Праскева Антонова. В 1862 году — «вдова Праскева Антонова, дети её: Никита…» <a href="#source-a0030">[7]</a><span class="imgref"><a class="lb" href="artifacts/A-0030_ispoved1835_Yurenevo_dvor168.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0030_ispoved1835_d1263_scan700_full.jpg" data-cap="Полный разворот">скан</a></span> <a href="#source-a0028">[8]</a><span class="imgref"><a class="lb" href="artifacts/A-0028_ispoved1862_Yurenevo_dvory181-182.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0028_ispoved1862_d1842_scan876_full.jpg" data-cap="Полный разворот">скан</a></span> <a href="#source-a0035">[9]</a><span class="imgref"><a class="lb" href="artifacts/A-0035_ispoved1865_Yurenevo_dvor193.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0035_ispoved1865_d1901_scan846_full.jpg" data-cap="Полный разворот">скан</a></span></td><td data-label="Надёжность" class="t"><span class="tag ok">подтверждено</span></td></tr>
+    <tr id="rel-nikita"><td data-label="Связь">Никита Яковлевич и Александра Ивановна → Иван (~1862–1864)</td><td data-label="Чем подтверждается">Исповедная ведомость 1865 года: «Никитина жена Александра Иванова, дети их: Андрей 13, Пелагея 9, Марина 8, Мария 7, Василий 5, Иван 3, Агрипина новорождённая» <a href="#source-a0035">[9]</a><span class="imgref"><a class="lb" href="artifacts/A-0035_ispoved1865_Yurenevo_dvor193.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0035_ispoved1865_d1901_scan846_full.jpg" data-cap="Полный разворот">скан</a></span>. При венчании 1889 года поручителем Ивана был его брат Андрей Никитин <a href="#source-a0036">[10]</a><span class="imgref"><a class="lb" href="artifacts/A-0036_MK1889_brak_Ivan_Nikitin_Medkov.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0036_MK1889_d488_scan208_full.jpg" data-cap="Полный разворот">скан</a></span>. Фамилия «Медков» у Никиты и его сыновей — в записях 1879–1904 годов</td><td data-label="Надёжность" class="t"><span class="tag ok">подтверждено</span></td></tr>
+    <tr id="rel-anna"><td data-label="Связь">Иван Никитич ↔ Анна Адриановна; Адриан Матвеев → Анна</td><td data-label="Чем подтверждается">Запись о браке 1889 года в Воскресенской церкви села Раменье: жених — «рядовой 94-го пехотного Енисейского полка 3-й роты Иван Никитин Медков», 25 лет; невеста — «села Раменья крестьянина Адриана Матвеева дочь Анна», 20 лет <a href="#source-a0036">[10]</a><span class="imgref"><a class="lb" href="artifacts/A-0036_MK1889_brak_Ivan_Nikitin_Medkov.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0036_MK1889_d488_scan208_full.jpg" data-cap="Полный разворот">скан</a></span></td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr id="rel-ivan"><td data-label="Связь">Иван Никитич и Анна Адриановна → Сергий (5.08.1897)</td><td data-label="Чем подтверждается">Метрика 1897 года: «Деревни Юренева запасный рядовой Иван Никитин и законная жена его Анна Адрианова». Фамилию даёт сопоставление с записями о других детях тех же родителей (1891, 1893, 1895) <a href="#source-a0005">[11]</a><span class="imgref"><a class="lb" href="artifacts/A-0005_novonikolskoe-1897_scan232_entry19_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0005_novonikolskoe-1897_d2088_scan232_full.jpg" data-cap="Полный разворот">скан</a></span></td><td data-label="Надёжность" class="t"><span class="tag ok">подтверждено</span></td></tr>
+    <tr id="rel-sergey"><td data-label="Связь">Сергий (Юренево, 1897) = Сергей Иванович Медков, 1897 г. р., живший в 1941 году в Ханеве → Николай</td><td data-label="Чем подтверждается">Совпадают имя, отчество, фамилия и год. Юренево с 1929 года входит в Шаховской район — так место рождения записано в наградной картотеке. Сергей Иванович как отец Николая известен со слов семьи <a href="#source-a0001">[1]</a><span class="imgref"><a class="lb" href="artifacts/A-0001_volokolamsk-rvk-1943_row229_crop.png" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0001_volokolamsk-rvk-1943_p345_full.jpg" data-cap="Полный разворот">скан</a></span> <a href="#source-a0002">[2]</a><span class="imgref"><a class="lb" href="artifacts/A-0002_award_fields.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0002_award-sheet-1945_full.jpg" data-cap="Полный разворот">скан</a></span></td><td data-label="Надёжность" class="t"><span class="tag maybe">вероятно</span> <span class="tag fam">по сведениям семьи</span></td></tr>
+    <tr id="rel-liza"><td data-label="Связь">Лиза = Елизавета Симеоновна Филиппова (12.10.1904, д. Петровская)</td><td data-label="Чем подтверждается">Метрика 1904 года <a href="#source-a0011">[12]</a><span class="imgref"><a class="lb" href="artifacts/A-0011_fedorovskoe-1904_scan304_elizaveta_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0011_fedorovskoe-1904_scan304_full.jpg" data-cap="Полный разворот">скан</a></span></td><td data-label="Надёжность" class="t"><span class="tag maybe">вероятно</span></td></tr>
+    <tr id="rel-brothers"><td data-label="Связь">Сергей Иванович и Лиза → Леонид, Виктор, Валентин</td><td data-label="Чем подтверждается">Виктор Сергеевич назван вместе с Николаем Сергеевичем как наследник в судебном решении 2013 года <a href="#source-a0014">[13]</a>; это подтвердила и семья. Леонид и Валентин — братья со слов семьи</td><td data-label="Надёжность" class="t"><span class="tag ok">Виктор — подтверждено</span> <span class="tag fam">Леонид, Валентин — по сведениям семьи</span></td></tr>
+  </tbody>
+</table></div>
+<p><b>Почему это одни и те же люди.</b> Деревня, приход и владелец совпадают во всех документах. Возраст Никиты сходится: метрика 1830 года, 4 года в 1835-м, 34 в 1862-м, 37 в 1865-м. Совпадают жена и дети: сын Константин, родившийся у «Никиты Яковлева и Александры Ивановой» в 1862 году, записан в ведомости того же года полугодовалым. Номер двора последовательно переходит из одной ведомости в другую. В соседних дворах Юренева других семей с Никитой Яковлевым и Праскевой Антоновой нет. Встречающийся в 1842 году «Ефремовский мещанин Никита Яковлев» с женой Екатериной Ивановной — другой человек.</p>
+
+<h3>Семья Ивана Карповича (по ревизиям и ведомостям 1811–1865)</h3>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Таблица; при необходимости прокручивается"><table>
+  <thead><tr><th scope="col">Кем приходится Николаю</th><th scope="col">Имя</th><th scope="col">Годы</th><th scope="col">Откуда известно</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Кем приходится Николаю">брат 4×прадеда</td><td data-label="Имя">Афонасий Карпович</td><td data-label="Годы">ок. 1760 — ок. 1836</td><td data-label="Откуда известно">ревизии 1811, 1816; ведомости 1819–1835; вдовец, в 1825–1835 годах — глава двора <span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">сестра 4×прадеда</td><td data-label="Имя">Аксинья (Ксения) Карповна</td><td data-label="Годы">ок. 1766</td><td data-label="Откуда известно">ревизия 1816 («Карповым сестра Аксинья», 50 лет); в 1819 году ей записано 80 лет — расхождение <span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">брат 3×прадеда</td><td data-label="Имя">Иван Иванович</td><td data-label="Годы">ок. 1794</td><td data-label="Откуда известно">ревизия 1816: «в ополчении с 1812-го не воротился» <span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">брат 3×прадеда</td><td data-label="Имя">Кирила Иванович</td><td data-label="Годы">ок. 1798</td><td data-label="Откуда известно">жена Матрона Игнатьевна; дети Евфросиния, Константин, Александра, Даниил <span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">брат 3×прадеда</td><td data-label="Имя">Яков Иванович младший</td><td data-label="Годы">ок. 1808 — после 1865</td><td data-label="Откуда известно">жена Анна Флоровна; дети Пётр (1832), Козьма (1835), Иустин, Иоанн, Георгий <span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">брат 3×прадеда</td><td data-label="Имя">Дорофей Иванович</td><td data-label="Годы">ок. 1810 — после 1865</td><td data-label="Откуда известно">жена Марья Александровна; дети Ульяна, Илья, Феодор, Козьма, Екатерина <span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">братья и сёстры прапрадеда Никиты</td><td data-label="Имя">Настасья (~1825), Сергей (~1828, ум. 1836), Праскева (1832), Татьяна (1836), Евдокия, Иван (~1840, жена Елена Ивановна), Акилина (~1844)</td><td data-label="Годы"></td><td data-label="Откуда известно">ведомости 1831–1865, метрики 1832, 1836 <span class="tag ok">по документу</span></td></tr>
+  </tbody>
+</table></div>
+<p class="small">Даты до 1918 года — по старому стилю. Возраст в ревизиях и ведомостях приблизителен и колеблется на 1–3 года. Фамилия «Медков» в документах появляется только во второй половине XIX века; до этого крестьяне записаны по имени и отчеству («Яков Иванов»).</p>
+
+<h2 id="documents">Документы в изображениях</h2>
+<p>Под каждой вырезкой — ссылка на полный разворот (открывается здесь же; кнопка «Крупнее» показывает лист в натуральную величину) и на страницу документа в архиве. Нажмите на вырезку, чтобы рассмотреть её.</p>
+<h3 class="docs-group">Юренево: ревизские сказки и исповедные ведомости, 1811–1865</h3>
+<figure class="doc" id="doc-a0034"><a class="lb doc-crop" href="artifacts/A-0034_revizia1811_Afonasei_Ivan_Karpovy.jpg" data-cap="Ревизская сказка 1811 года — вырезка"><img src="artifacts/A-0034_revizia1811_Afonasei_Ivan_Karpovy.jpg" alt="Ревизская сказка 1811 года, вырезка 1" loading="lazy"></a><a class="lb doc-crop" href="artifacts/A-0034_revizia1811_Ivanovy_deti.jpg" data-cap="Ревизская сказка 1811 года — вырезка"><img src="artifacts/A-0034_revizia1811_Ivanovy_deti.jpg" alt="Ревизская сказка 1811 года, вырезка 2" loading="lazy"></a><figcaption><b>Ревизская сказка 1811 года.</b> Сельцо Юренево М. Г. Зарина, семья 7: «Афонасей, Иван Карповы» — по прошлой ревизии 1795 года им 35 и 28 лет; ниже — «Ивановы дети: Иван, Яков, Кирила, Яков, Дарафей».<span class="doc-links"><a class="lb" href="artifacts/full/A-0034_revizia1811_d11_scan599_full.jpg" data-cap="Ревизская сказка 1811 года — полный разворот">Разворот 1</a> · <a class="lb" href="artifacts/full/A-0034_revizia1811_d11_scan600_full.jpg" data-cap="Ревизская сказка 1811 года — полный разворот">Разворот 2</a> · <a href="https://ya.ru/archive/catalog/38b46d1b-3b4a-4aac-a439-b55117384d91/599" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 51, оп. 8, д. 11, л. 584–586</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0027"><a class="lb doc-crop" href="artifacts/A-0027_revizia1816_semya6_muzh.jpg" data-cap="Ревизская сказка 1816 года — вырезка"><img src="artifacts/A-0027_revizia1816_semya6_muzh.jpg" alt="Ревизская сказка 1816 года, вырезка 1" loading="lazy"></a><a class="lb doc-crop" href="artifacts/A-0027_revizia1816_semya6_zhen.jpg" data-cap="Ревизская сказка 1816 года — вырезка"><img src="artifacts/A-0027_revizia1816_semya6_zhen.jpg" alt="Ревизская сказка 1816 года, вырезка 2" loading="lazy"></a><figcaption><b>Ревизская сказка 1816 года.</b> Семья 6: Иван Карпов, его сыновья Иван («в ополчении с 1812-го не воротился»), Яков 18 лет, Кирила, Яков 8 лет, Дорофей; справа — «Ивана Карпова жена Домна», «Якова Иванова жена Прасковья».<span class="doc-links"><a class="lb" href="artifacts/full/A-0027_revizia1816_d78_scan224_full.jpg" data-cap="Ревизская сказка 1816 года — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/39ea186b-1171-4fdd-9941-9c03c02560e2/224" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 51, оп. 8, д. 78, л. 218</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0029"><a class="lb doc-crop" href="artifacts/A-0029_ispoved1819_Yurenevo_dvor160_Karpovy.jpg" data-cap="Исповедная ведомость 1819 года — вырезка"><img src="artifacts/A-0029_ispoved1819_Yurenevo_dvor160_Karpovy.jpg" alt="Исповедная ведомость 1819 года, вырезка 1" loading="lazy"></a><figcaption><b>Исповедная ведомость 1819 года.</b> Двор 160: «Афонасий вдов, Иван, Ксения — Карповы; Иванова жена Домна Егорова, дети их: Яков, Кирила, Яков, Дорофей; Яковлева жена Праскева Антонова».<span class="doc-links"><a class="lb" href="artifacts/full/A-0029_ispoved1819_f207_d3019_scan17_full.jpg" data-cap="Исповедная ведомость 1819 года — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/9e43d0fd-1f92-4d73-a49c-74797ce57ffc/17" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 207, оп. 1, д. 3019</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0030"><a class="lb doc-crop" href="artifacts/A-0030_ispoved1835_Yurenevo_dvor168.jpg" data-cap="Исповедная ведомость 1835 года — вырезка"><img src="artifacts/A-0030_ispoved1835_Yurenevo_dvor168.jpg" alt="Исповедная ведомость 1835 года, вырезка 1" loading="lazy"></a><figcaption><b>Исповедная ведомость 1835 года.</b> Двор 168: Никита, 4 года, — среди детей «1-го Иакова» и Праскевы Антоновой.<span class="doc-links"><a class="lb" href="artifacts/full/A-0030_ispoved1835_d1263_scan700_full.jpg" data-cap="Исповедная ведомость 1835 года — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/d5b22379-7c7a-4806-bb55-05a4dec94361/700" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 747, д. 1263, л. 698</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0028"><a class="lb doc-crop" href="artifacts/A-0028_ispoved1862_Yurenevo_dvory181-182.jpg" data-cap="Исповедная ведомость 1862 года — вырезка"><img src="artifacts/A-0028_ispoved1862_Yurenevo_dvory181-182.jpg" alt="Исповедная ведомость 1862 года, вырезка 1" loading="lazy"></a><figcaption><b>Исповедная ведомость 1862 года.</b> Двор 181: вдова Праскева Антонова, её сын Никита 34 лет, его жена Александра Иванова и их дети Андрей, Пелагея, Мария, Марина, Василий, Константин. Двор 182 — семья Якова-младшего.<span class="doc-links"><a class="lb" href="artifacts/full/A-0028_ispoved1862_d1842_scan876_full.jpg" data-cap="Исповедная ведомость 1862 года — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/983c6c00-f816-47ee-8b9e-4bd71644b919/876" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 747, д. 1842, л. 873</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0035"><a class="lb doc-crop" href="artifacts/A-0035_ispoved1865_Yurenevo_dvor193.jpg" data-cap="Исповедная ведомость 1865 года — вырезка"><img src="artifacts/A-0035_ispoved1865_Yurenevo_dvor193.jpg" alt="Исповедная ведомость 1865 года, вырезка 1" loading="lazy"></a><figcaption><b>Исповедная ведомость 1865 года.</b> Двор 193: у Никиты и Александры Ивановой — сын Иван, 3 года. Это прадед Николая Сергеевича.<span class="doc-links"><a class="lb" href="artifacts/full/A-0035_ispoved1865_d1901_scan846_full.jpg" data-cap="Исповедная ведомость 1865 года — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/213f48dd-f2ba-4d0c-9f73-dca1ad7b98e0/846" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 747, д. 1901, л. 842</span></span></figcaption></figure>
+<h3 class="docs-group">Метрические книги: Никита, Иван Никитич и его дети, 1830–1904</h3>
+<figure class="doc" id="doc-a0032"><a class="lb doc-crop" href="artifacts/A-0032_MK1830_Nikita_birth.jpg" data-cap="Рождение Никиты, сентябрь 1830 — вырезка"><img src="artifacts/A-0032_MK1830_Nikita_birth.jpg" alt="Рождение Никиты, сентябрь 1830, вырезка 1" loading="lazy"></a><figcaption><b>Рождение Никиты, сентябрь 1830.</b> Метрическая книга Троицкой церкви села Никольского, № 122: «у крестьянина Якова Иванова родился сын Никита», 10 сентября, Юренево, вотчина госпожи Зариной.<span class="doc-links"><a class="lb" href="artifacts/full/A-0032_MK1830_d1330_scan755_full.jpg" data-cap="Рождение Никиты, сентябрь 1830 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/6ab2a20b-a000-48d4-9608-65caca1c4d43/755" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 745, д. 1330, л. 749 об.</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0036"><a class="lb doc-crop" href="artifacts/A-0036_MK1889_brak_Ivan_Nikitin_Medkov.jpg" data-cap="Брак Ивана Никитича и Анны Адриановны, 1889 — вырезка"><img src="artifacts/A-0036_MK1889_brak_Ivan_Nikitin_Medkov.jpg" alt="Брак Ивана Никитича и Анны Адриановны, 1889, вырезка 1" loading="lazy"></a><figcaption><b>Брак Ивана Никитича и Анны Адриановны, 1889.</b> Воскресенская церковь села Раменье, № 19: рядовой 94-го пехотного Енисейского полка Иван Никитин Медков, 25 лет, и Анна, дочь крестьянина Адриана Матвеева, 20 лет.<span class="doc-links"><a class="lb" href="artifacts/full/A-0036_MK1889_d488_scan208_full.jpg" data-cap="Брак Ивана Никитича и Анны Адриановны, 1889 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/a8f2df53-6789-4369-a654-3815e692e87c/208" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 780, д. 488, л. 205</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0007"><a class="lb doc-crop" href="artifacts/A-0007_nikolskoe-1891_scan263_lyubov_crop.jpg" data-cap="Рождение Любови, 21 сентября 1891 — вырезка"><img src="artifacts/A-0007_nikolskoe-1891_scan263_lyubov_crop.jpg" alt="Рождение Любови, 21 сентября 1891, вырезка 1" loading="lazy"></a><figcaption><b>Рождение Любови, 21 сентября 1891.</b> Родители: «запасный рядовой Иван Никитин Медков и законная жена его Анна Адрианова».<span class="doc-links"><a class="lb" href="artifacts/full/A-0007_matrenino-1891_d2042_scan263_full.jpg" data-cap="Рождение Любови, 21 сентября 1891 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/14b8d0f2-188c-481e-aba4-67213e0f0f44/263" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 780, д. 2042</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0008"><a class="lb doc-crop" href="artifacts/A-0008_nikolskoe-1893_scan263_nadezhda_crop.jpg" data-cap="Рождение Надежды, 28 августа 1893 — вырезка"><img src="artifacts/A-0008_nikolskoe-1893_scan263_nadezhda_crop.jpg" alt="Рождение Надежды, 28 августа 1893, вырезка 1" loading="lazy"></a><figcaption><b>Рождение Надежды, 28 августа 1893.</b> Те же родители, деревня Юренево Кульпинской волости.<span class="doc-links"><a class="lb" href="artifacts/full/A-0008_nikolskoe-1893_d2060_scan263_full.jpg" data-cap="Рождение Надежды, 28 августа 1893 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/09a86342-d1a0-41c1-8f60-8c97c32f92e5/263" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 780, д. 2060</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0006"><a class="lb doc-crop" href="artifacts/A-0006_novonikolskoe-1895_scan9_vera_crop.jpg" data-cap="Рождение Веры, 10 августа 1895 — вырезка"><img src="artifacts/A-0006_novonikolskoe-1895_scan9_vera_crop.jpg" alt="Рождение Веры, 10 августа 1895, вырезка 1" loading="lazy"></a><figcaption><b>Рождение Веры, 10 августа 1895.</b> Отец здесь — «запасный унтер-офицер Иван Никитин Медков».<span class="doc-links"><a class="lb" href="artifacts/full/A-0006_novonikolskoe-1895_d2070_scan9_full.jpg" data-cap="Рождение Веры, 10 августа 1895 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/03cfa30c-061e-4a44-a2fc-86ee4071d711/9" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 780, д. 2070</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0005"><a class="lb doc-crop" href="artifacts/A-0005_novonikolskoe-1897_scan232_entry19_crop.jpg" data-cap="Рождение Сергия, 5 августа 1897 — вырезка"><img src="artifacts/A-0005_novonikolskoe-1897_scan232_entry19_crop.jpg" alt="Рождение Сергия, 5 августа 1897, вырезка 1" loading="lazy"></a><figcaption><b>Рождение Сергия, 5 августа 1897.</b> Отец Николая Сергеевича. Родители: «деревни Юренева запасный рядовой Иван Никитин и законная жена его Анна Адрианова».<span class="doc-links"><a class="lb" href="artifacts/full/A-0005_novonikolskoe-1897_d2088_scan232_full.jpg" data-cap="Рождение Сергия, 5 августа 1897 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/8d59f2e5-0761-4a1c-9df7-95e182262fd4/232" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 780, д. 2088</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0009"><a class="lb doc-crop" href="artifacts/A-0009_1904_scan155_aleksey_crop.jpg" data-cap="Рождение Алексея, 1904 — вырезка"><img src="artifacts/A-0009_1904_scan155_aleksey_crop.jpg" alt="Рождение Алексея, 1904, вырезка 1" loading="lazy"></a><figcaption><b>Рождение Алексея, 1904.</b> Родители: «дер. Юренева крестьянин Иоанн Никитин Медков и законная жена его Анна Адрианова».<span class="doc-links"><a class="lb" href="artifacts/full/A-0009_d3219-1904_scan155_full.jpg" data-cap="Рождение Алексея, 1904 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/72612826-1121-4a77-96bb-a4eb1dc49a70/155" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 780, д. 3219</span></span></figcaption></figure>
+<h3 class="docs-group">Род Лизы: деревня Петровская, 1856–1904</h3>
+<figure class="doc" id="doc-a0037"><a class="lb doc-crop" href="artifacts/A-0037_MK1856_Matrona_Timofeeva_kryostnaya.jpg" data-cap="Матрона Тимофеева — крёстная, 1856 — вырезка"><img src="artifacts/A-0037_MK1856_Matrona_Timofeeva_kryostnaya.jpg" alt="Матрона Тимофеева — крёстная, 1856, вырезка 1" loading="lazy"></a><figcaption><b>Матрона Тимофеева — крёстная, 1856.</b> Рождение Екатерины, дочери Захара Тимофеева из деревни Ревино; крёстная — «деревни Петровской крестьянина Филиппа Васильева жена Матрона Тимофеева».<span class="doc-links"><a class="lb" href="artifacts/full/A-0037_MK1856_d1970_scan812_full.jpg" data-cap="Матрона Тимофеева — крёстная, 1856 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/ad3a421e-a23f-4a96-a34d-ced66e8d36eb/812" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 745, д. 1970, л. 809</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0025"><a class="lb doc-crop" href="artifacts/A-0025_fedorovskoe-1869_scan286_simeon_crop.jpg" data-cap="Рождение Симеона, 29 января 1869 — вырезка"><img src="artifacts/A-0025_fedorovskoe-1869_scan286_simeon_crop.jpg" alt="Рождение Симеона, 29 января 1869, вырезка 1" loading="lazy"></a><figcaption><b>Рождение Симеона, 29 января 1869.</b> Отец Лизы. Родители: «Оренбургского полка рядовой Филипп Васильев и законная жена его Матрона Тимофеева».<span class="doc-links"><a class="lb" href="artifacts/full/A-0025_fedorovskoe-186x_cgamo8926-1-228_scan286_full.jpg" data-cap="Рождение Симеона, 29 января 1869 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/d8a3e7f0-a4ee-4d9a-af4a-795615c68ef9/286" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГАМО, ф. 8926, оп. 1, д. 228</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0026"><a class="lb doc-crop" href="artifacts/A-0026_fedorovskoe-1872_scan139_feodosia_crop.jpg" data-cap="Рождение Феодосии, 1872 — вырезка"><img src="artifacts/A-0026_fedorovskoe-1872_scan139_feodosia_crop.jpg" alt="Рождение Феодосии, 1872, вырезка 1" loading="lazy"></a><figcaption><b>Рождение Феодосии, 1872.</b> Мать Лизы. Родители: «деревни Петровской временнообязанный крестьянин Христофор Александров и законная жена его Надежда Иванова».<span class="doc-links"><a class="lb" href="artifacts/full/A-0026_fedorovskoe-1872_cgamo8926-1-229_scan139_full.jpg" data-cap="Рождение Феодосии, 1872 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/e1cf5bb7-8c3a-4ef6-9f12-81f9cb14de5f/139" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГАМО, ф. 8926, оп. 1, д. 229</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0021"><a class="lb doc-crop" href="artifacts/A-0021_fedorovskoe-1894_scan284_marriage31_crop.jpg" data-cap="Брак Симеона и Феодосии, 6 июня 1894 — вырезка"><img src="artifacts/A-0021_fedorovskoe-1894_scan284_marriage31_crop.jpg" alt="Брак Симеона и Феодосии, 6 июня 1894, вырезка 1" loading="lazy"></a><figcaption><b>Брак Симеона и Феодосии, 6 июня 1894.</b> Жених — канонир Новогеоргиевской крепостной артиллерии в запасе Симеон Филиппов Филиппов, 26 лет; невеста — Феодосия Христофорова, 22 года; оба из деревни Петровской.<span class="doc-links"><a class="lb" href="artifacts/full/A-0021_fedorovskoe-1894_d2063_scan284_full.jpg" data-cap="Брак Симеона и Феодосии, 6 июня 1894 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/5c2c1314-54cf-4dbd-b1d8-97dbf696e6ea/284" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 780, д. 2063</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0011"><a class="lb doc-crop" href="artifacts/A-0011_fedorovskoe-1904_scan304_elizaveta_crop.jpg" data-cap="Рождение Елизаветы, 12 октября 1904 — вырезка"><img src="artifacts/A-0011_fedorovskoe-1904_scan304_elizaveta_crop.jpg" alt="Рождение Елизаветы, 12 октября 1904, вырезка 1" loading="lazy"></a><figcaption><b>Рождение Елизаветы, 12 октября 1904.</b> Вероятно, Лиза — мать Николая Сергеевича. Родители: «деревни Петровской крестьянин Симеон Филиппов и его законная жена Феодосья Христофорова».<span class="doc-links"><a class="lb" href="artifacts/full/A-0011_fedorovskoe-1904_scan304_full.jpg" data-cap="Рождение Елизаветы, 12 октября 1904 — полный разворот">Полный разворот</a> · <a href="https://ya.ru/archive/catalog/30e78736-8050-40a8-864c-b9cebc3a7d54/304" target="_blank" rel="noopener">Яндекс Поиск по архивам</a> · <span class="doc-ref">ЦГА Москвы, ф. 203, оп. 780, том 1904 г.</span></span></figcaption></figure>
+<h3 class="docs-group">Сергей Иванович на войне, 1941–1945</h3>
+<figure class="doc" id="doc-a0001"><a class="lb doc-crop" href="artifacts/A-0001_volokolamsk-rvk-1943_row229_crop.png" data-cap="Список призыва Волоколамского райвоенкомата — вырезка"><img src="artifacts/A-0001_volokolamsk-rvk-1943_row229_crop.png" alt="Список призыва Волоколамского райвоенкомата, вырезка 1" loading="lazy"></a><figcaption><b>Список призыва Волоколамского райвоенкомата.</b> Строка 229: Медков Сергей Иванович, 1897, рядовой; местожительство до призыва — село Ханево; призван 3 сентября 1941 года.<span class="doc-links"><a class="lb" href="artifacts/full/A-0001_volokolamsk-rvk-1943_p345_full.jpg" data-cap="Список призыва Волоколамского райвоенкомата — полный разворот">Полный разворот</a> · <a href="https://pamyat-naroda.ru/heroes/rvk-chelovek_voenkomat13666863/" target="_blank" rel="noopener">«Память народа»</a> · <span class="doc-ref">ЦАМО</span></span></figcaption></figure>
+<figure class="doc" id="doc-a0002"><a class="lb doc-crop" href="artifacts/A-0002_award_fields.jpg" data-cap="Наградной лист, апрель 1945 — вырезка"><img src="artifacts/A-0002_award_fields.jpg" alt="Наградной лист, апрель 1945, вырезка 1" loading="lazy"></a><a class="lb doc-crop" href="artifacts/A-0002_award_text.jpg" data-cap="Наградной лист, апрель 1945 — вырезка"><img src="artifacts/A-0002_award_text.jpg" alt="Наградной лист, апрель 1945, вырезка 2" loading="lazy"></a><figcaption><b>Наградной лист, апрель 1945.</b> Представление гвардии красноармейца Медкова к медали «За боевые заслуги» за бои под Кёнигсбергом. Расшифровка — ниже.<span class="doc-links"><a class="lb" href="artifacts/full/A-0002_award-sheet-1945_full.jpg" data-cap="Наградной лист, апрель 1945 — полный разворот">Полный разворот</a> · <a href="https://pamyat-naroda.ru/heroes/podvig-chelovek_nagrazhdenie38987891/" target="_blank" rel="noopener">«Память народа»</a> · <span class="doc-ref">ЦАМО</span></span></figcaption><div class="transcript" aria-label="Расшифровка наградного листа">
+  <p class="transcript-title">Расшифровка наградного листа</p>
+  <dl>
+    <dt>1. Фамилия, имя и отчество</dt><dd>Медков Сергей Иванович</dd>
+    <dt>2. Звание</dt><dd>Гвардии красноармеец</dd>
+    <dt>3. Должность, часть</dt><dd>Орудийный номер 1 д-на, 13 Гв. Арт. Кр. Пуш. Бригады РГК</dd>
+    <dt>Представляется к награде</dt><dd>Медалью «За боевые заслуги»</dd>
+    <dt>4. Год рождения</dt><dd>1897</dd>
+    <dt>5. Национальность</dt><dd>Русский</dd>
+    <dt>6. Партийность</dt><dd>Беспартийный</dd>
+    <dt>7. Участие в гражданской войне и последующих боевых действиях по защите СССР</dt><dd>Участник Отечественной войны с 1941 г. августа м-ца</dd>
+    <dt>8. Ранения и контузии</dt><dd>Не имеет</dd>
+    <dt>9. С какого времени в РККА</dt><dd>С 1941 г. августа м-ца</dd>
+    <dt>10. Каким РВК призван</dt><dd>Волоколамским РВК, Московск. обл.</dd>
+    <dt>11. Чем ранее награждён</dt><dd>Наград не имеет</dd>
+    <dt>12. Постоянный домашний адрес</dt><dd>закрыт на сайте «Память народа»</dd>
+  </dl>
+  <p class="transcript-sub">Краткое, конкретное изложение личного боевого подвига или заслуг</p>
+  <p>Тов. Медков участвует на фронте Отечественной войны с августа 1941 года.</p>
+  <p>В наступательных боях по уничтожению окружённой группировки немцев в р-не ю.-з. г. Кенигсберг с 13–21.03.45 г. отлично работал комбинирующим [слово читается неуверенно], в результате его орудием в составе батареи подавлено 2 арт. батареи, 3 реактивных установки и 5 пулемётов, из них 2 уничтожено.</p>
+  <p>6–7.04.45 г. в наступательных боях за овладение г. Кенигсберг его орудием в составе батареи подавлено 2 арт. батареи и одна реактивная установка.</p>
+  <p>За отличную работу и проявленную при этом доблесть и мужество ходатайствую наградить т. Медкова медалью «За боевые заслуги».</p>
+  <p class="transcript-sign">Командир 1 д-на 13 Гв. Арт. Кр. Пуш. Бр. РГК майор [подпись] (Кузнецов)</p>
+  <p class="small">«13 Гв. Арт. Кр. Пуш. Бригада РГК» — вероятно, 13-я гвардейская артиллерийская Краснознамённая пушечная бригада Резерва Главного командования; «Гв.» на листе похоже на «8». В тексте листа «его орудие … подавлено» — согласование сохранено по смыслу.</p>
+</div></figure>
+
+<h2 id="liza">Род Лизы</h2>
+<p>Если Лиза — Елизавета Симеоновна, родившаяся в 1904 году (очень вероятно, но не доказано), то её семья по документам такова.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Таблица; при необходимости прокручивается"><table>
+  <thead><tr><th scope="col">Кем приходится Николаю</th><th scope="col">Имя</th><th scope="col">Годы</th><th scope="col">Откуда известно</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Кем приходится Николаю">мать</td><td data-label="Имя">Елизавета Симеоновна Филиппова</td><td data-label="Годы">род. 12.10.1904, д. Петровская</td><td data-label="Откуда известно">метрика Скорбященской ц. с. Федоровского <a href="#source-a0011">[12]</a><span class="imgref"><a class="lb" href="artifacts/A-0011_fedorovskoe-1904_scan304_elizaveta_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0011_fedorovskoe-1904_scan304_full.jpg" data-cap="Полный разворот">скан</a></span> <span class="tag maybe">вероятно — тождество с Лизой</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">дед</td><td data-label="Имя">Симеон Филиппович Филиппов</td><td data-label="Годы">род. 29.01.1869</td><td data-label="Откуда известно">канонир Новогеоргиевской крепостной артиллерии в запасе; брак 6.06.1894 <a href="#source-a0021">[14]</a><span class="imgref"><a class="lb" href="artifacts/A-0021_fedorovskoe-1894_scan284_marriage31_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0021_fedorovskoe-1894_d2063_scan284_full.jpg" data-cap="Полный разворот">скан</a></span>; рождение <a href="#source-a0025">[15]</a><span class="imgref"><a class="lb" href="artifacts/A-0025_fedorovskoe-1869_scan286_simeon_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0025_fedorovskoe-186x_cgamo8926-1-228_scan286_full.jpg" data-cap="Полный разворот">скан</a></span> <span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">бабушка</td><td data-label="Имя">Феодосия Христофоровна (возможно, Котова)</td><td data-label="Годы">род. ок. мая 1872</td><td data-label="Откуда известно">брак 1894 <a href="#source-a0021">[14]</a><span class="imgref"><a class="lb" href="artifacts/A-0021_fedorovskoe-1894_scan284_marriage31_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0021_fedorovskoe-1894_d2063_scan284_full.jpg" data-cap="Полный разворот">скан</a></span>; рождение <a href="#source-a0026">[16]</a><span class="imgref"><a class="lb" href="artifacts/A-0026_fedorovskoe-1872_scan139_feodosia_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0026_fedorovskoe-1872_cgamo8926-1-229_scan139_full.jpg" data-cap="Полный разворот">скан</a></span>; фамилия «Котова» — только в одной московской ведомости <span class="tag maybe">фамилия — вероятно</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">прадед</td><td data-label="Имя">Филипп Васильевич</td><td data-label="Годы">в браке к 1856</td><td data-label="Откуда известно">крестьянин д. Петровской, временнообязанный (1864), рядовой Оренбургского полка (1869) <a href="#source-a0025">[15]</a><span class="imgref"><a class="lb" href="artifacts/A-0025_fedorovskoe-1869_scan286_simeon_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0025_fedorovskoe-186x_cgamo8926-1-228_scan286_full.jpg" data-cap="Полный разворот">скан</a></span> <a href="#source-a0037">[17]</a><span class="imgref"><a class="lb" href="artifacts/A-0037_MK1856_Matrona_Timofeeva_kryostnaya.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0037_MK1856_d1970_scan812_full.jpg" data-cap="Полный разворот">скан</a></span> <span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">прабабка</td><td data-label="Имя">Матрона Тимофеевна</td><td data-label="Годы"></td><td data-label="Откуда известно">в 1856 году — крёстная у дочери Захара Тимофеева из д. Ревино; крёстные её сына в 1869 году — Егор Тимофеев (Ревино) и Ирина Тимофеева (Ханево). Вероятно, она из семьи Тимофеевых деревни Ревино <a href="#source-a0037">[17]</a><span class="imgref"><a class="lb" href="artifacts/A-0037_MK1856_Matrona_Timofeeva_kryostnaya.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0037_MK1856_d1970_scan812_full.jpg" data-cap="Полный разворот">скан</a></span> <span class="tag maybe">происхождение — вероятно</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">прадед</td><td data-label="Имя">Христофор Александрович</td><td data-label="Годы"></td><td data-label="Откуда известно">временнообязанный крестьянин д. Петровской; жена Надежда Гавриловна (в одной записи — Ивановна); дети Татиана, Георгий, Павел, Феодосия <a href="#source-a0026">[16]</a><span class="imgref"><a class="lb" href="artifacts/A-0026_fedorovskoe-1872_scan139_feodosia_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0026_fedorovskoe-1872_cgamo8926-1-229_scan139_full.jpg" data-cap="Полный разворот">скан</a></span> <span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Кем приходится Николаю">братья и сёстры Лизы</td><td data-label="Имя">Александр (~1895), Мария (1898), Алексей (1903), близнецы Михаил и Екатерина (1907)</td><td data-label="Годы"></td><td data-label="Откуда известно">метрики Федоровского прихода по индексу Яндекса; сканы не все сверены <span class="tag maybe">вероятно</span></td></tr>
+  </tbody>
+</table></div>
+
+<h2 id="medkovs">Медковы Юренева</h2>
+<p>Все Медковы деревни Юренево, найденные в метриках 1879–1918 годов, происходят от трёх сыновей Никиты Яковлевича. Сведения собраны по индексу Яндекса и сканам. Отдельные записи о детях сверены не все. <span class="tag maybe">по индексу</span></p>
+<ul>
+  <li><b>Андрей Никитич</b> (~1852), жена Анна Васильевна. Дети: Иван Андреевич (жена Татиана Петровна; в 1903–1918 годах их дети крестились и в Москве), Ксения (крёстная в 1897 году), Александр (в 1916 году — в Москве, в 1917–1928 — в документах Омского архива), Александра, Василий (крёстный в 1907 году), Клавдия (брак 1910), Агриппина (1887, умерла в 13 дней), Сергий (умер в младенчестве).</li>
+  <li><b>Василий Никитич</b> (~1860), жена Анна Петровна. Сыновья Василий (1889, умер в 7 месяцев) и Феодор (упоминается в 1908–1911 годах).</li>
+  <li><b>Иван Никитич</b> (~1862–1864), жена Анна Адриановна. Дети: Пётр (1890, умер в 11 недель), Любовь (21.09.1891), Надежда (28.08.1893), Вера (10.08.1895), Сергий (5.08.1897), Алексей (11.03?.1904). В 1902 году крёстной в Юреневе была «девица Наталия Иванова Медкова». Чья она дочь, не установлено.</li>
+  <li><b>Дочери Никиты:</b> Мария (брак 1887), Пелагея, Марина, Агрипина (1865).</li>
+</ul>
+<p>В Ханеве до 1926 года Медковых в документах нет. Сергей Иванович, по-видимому, переселился туда из Юренева во взрослом возрасте.</p>
+
+<h2 id="chronology">Хронология</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Хронология; при необходимости прокручивается"><table>
+  <thead><tr><th scope="col">Когда</th><th scope="col">Что и где</th><th scope="col">Надёжность</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Когда" class="d">1795</td><td data-label="Что и где">5-я ревизия: Афонасию Карповичу 35 лет, Ивану Карповичу 28 (по ревизии 1811 года)</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">1811</td><td data-label="Что и где">6-я ревизия: Юренево надворного советника М. Г. Зарина, семья 7 — Афонасий и Иван Карповы, сыновья Ивана</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">1812</td><td data-label="Что и где">старший сын Ивана Карповича, Иван, взят в ополчение и не вернулся</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">март 1816</td><td data-label="Что и где">7-я ревизия: Яков Иванович (18 лет) уже женат на Прасковье (18 лет)</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">1822–1825</td><td data-label="Что и где">умер Иван Карпович; в ведомости 1825 года Домна — вдова</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">10 сент. 1830</td><td data-label="Что и где">родился Никита, сын Якова Иванова, Юренево (вотчина Зариной)</td><td data-label="Надёжность" class="t"><span class="tag ok">подтверждено</span></td></tr>
+    <tr><td data-label="Когда" class="d">1832–1834</td><td data-label="Что и где">часть Юренева, где жила семья, переходит от Зариной к М. А. Смирнову (в метриках 1832 года — «вотчины госпожи Зариной», в 1834 году — «вотчины г-на Смирнова»)</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">ок. 1850–1851</td><td data-label="Что и где">Никита женится на Александре Ивановне</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">1855–1862</td><td data-label="Что и где">умер Яков Иванович; в 1862 году Праскева — вдова, семья временнообязанная</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">ок. 1862–1864</td><td data-label="Что и где">родился Иван Никитич (3 года в 1865-м; 25 лет при браке в 1889-м)</td><td data-label="Надёжность" class="t"><span class="tag ok">подтверждено</span></td></tr>
+    <tr><td data-label="Когда" class="d">1887</td><td data-label="Что и где">Иван Никитин Медков — рядовой на службе в Выборге</td><td data-label="Надёжность" class="t"><span class="tag ok">по индексу</span></td></tr>
+    <tr><td data-label="Когда" class="d">1889</td><td data-label="Что и где">брак Ивана Никитина Медкова и Анны Адриановой, с. Раменье</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">6 июня 1894</td><td data-label="Что и где">брак Симеона Филиппова и Феодосии Христофоровой, д. Петровская</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">5 авг. 1897</td><td data-label="Что и где">родился Сергий, сын Ивана Никитина и Анны Адриановой, Юренево</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">12 окт. 1904</td><td data-label="Что и где">родилась Елизавета, дочь Симеона Филиппова, д. Петровская</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">ок. 1927</td><td data-label="Что и где">брак Сергея и Лизы (оценка по году рождения старшего сына)</td><td data-label="Надёжность" class="t"><span class="tag fam">по сведениям семьи</span></td></tr>
+    <tr><td data-label="Когда" class="d">19 дек. 1928</td><td data-label="Что и где">родился Николай Сергеевич</td><td data-label="Надёжность" class="t"><span class="tag fam">по сведениям семьи</span></td></tr>
+    <tr><td data-label="Когда" class="d">авг.–сент. 1941</td><td data-label="Что и где">Сергей Иванович Медков из с. Ханево призван Волоколамским РВК (6 августа или 3 сентября — списки расходятся)</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">март–апр. 1945</td><td data-label="Что и где">бои под Кёнигсбергом; представление к медали «За боевые заслуги»</td><td data-label="Надёжность" class="t"><span class="tag ok">по документу</span></td></tr>
+    <tr><td data-label="Когда" class="d">годы неизвестны</td><td data-label="Что и где">служба в Восточной Германии, затем перевод в Беларусь</td><td data-label="Надёжность" class="t"><span class="tag fam">по сведениям семьи</span></td></tr>
+    <tr><td data-label="Когда" class="d">май 2019</td><td data-label="Что и где">Николай Сергеевич умер</td><td data-label="Надёжность" class="t"><span class="tag fam">по сведениям семьи</span></td></tr>
+  </tbody>
+</table></div>
+
+<h2>Места</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Места; при необходимости прокручивается"><table>
+  <thead><tr><th scope="col">Как в документе</th><th scope="col">Принадлежность на дату события</th><th scope="col">Позже</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Как в документе">сельцо Юренево, деревня Юренева</td><td data-label="Принадлежность на дату события">Московская губ., Волоколамский у.; после 1861 года — Кульпинская волость; приход Троицкой церкви с. Никольского (Ново-Никольское); владельцы — Зарины (до 1830-х), Смирновы; другие части деревни — Зверев, Румянцев</td><td data-label="Позже">с 1929 года — Шаховской район (по наградной картотеке)</td></tr>
+    <tr><td data-label="Как в документе">село Ханево</td><td data-label="Принадлежность на дату события">Волоколамский у., Ярополецкая волость; приход Скорбященской церкви с. Федоровского</td><td data-label="Позже">Волоколамский район (1941), Волоколамский городской округ (перечень земельных участков, 2023)</td></tr>
+    <tr><td data-label="Как в документе">деревня Петровская</td><td data-label="Принадлежность на дату события">Волоколамский у., Ярополецкая волость; приход с. Федоровского</td><td data-label="Позже"></td></tr>
+    <tr><td data-label="Как в документе">село Раменье</td><td data-label="Принадлежность на дату события">Волоколамский у., Кульпинская волость; Воскресенская церковь</td><td data-label="Позже"></td></tr>
+  </tbody>
+</table></div>
+
+<h2>Военная служба</h2>
+<p><b>Иван Никитич Медков</b> в 1887 году служил рядовым в Выборге, в 1889 году — рядовым 3-й роты 94-го пехотного Енисейского полка. С 1890 года он запасный рядовой, в 1895 году — запасный унтер-офицер. <span class="tag ok">по документу</span></p>
+<p><b>Сергей Иванович Медков</b> призван Волоколамским РВК в 1941 году: в одном списке — 3 сентября, в другом — 6 августа. В апреле 1945 года он гвардии красноармеец, орудийный номер 13-й гвардейской артиллерийской бригады РГК, на фронте с августа 1941 года, ранений нет. Представлен к медали «За боевые заслуги» за бои под Кёнигсбергом 13–21 марта и 6–7 апреля 1945 года. <span class="tag ok">по документу</span> <a href="#source-a0002">[2]</a><span class="imgref"><a class="lb" href="artifacts/A-0002_award_fields.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0002_award-sheet-1945_full.jpg" data-cap="Полный разворот">скан</a></span></p>
+
+<h2>Документы о семье</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Документы; при необходимости прокручивается"><table>
+  <thead><tr><th scope="col">Документ</th><th scope="col">Когда</th><th scope="col">Что из него следует</th><th scope="col">Где хранится</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Документ">Ревизская сказка (6-я ревизия)</td><td data-label="Когда">1811</td><td data-label="Что из него следует">Иван и Афонасий Карповы, сыновья Ивана</td><td data-label="Где хранится">ЦГА Москвы, ф. 51, оп. 8, д. 11, л. 584–586</td></tr>
+    <tr><td data-label="Документ">Ревизская сказка (7-я ревизия)</td><td data-label="Когда">март 1816</td><td data-label="Что из него следует">семья Ивана Карпова с жёнами сыновей</td><td data-label="Где хранится">ЦГА Москвы, ф. 51, оп. 8, д. 78, л. 218</td></tr>
+    <tr><td data-label="Документ">Исповедные ведомости</td><td data-label="Когда">1819, 1835, 1862, 1865</td><td data-label="Что из него следует">состав двора по годам; два Якова; дети Никиты</td><td data-label="Где хранится">ЦГА Москвы, ф. 207, оп. 1, д. 3019; ф. 203, оп. 747, дд. 1263, 1842, 1901</td></tr>
+    <tr><td data-label="Документ">Метрика о рождении Никиты</td><td data-label="Когда">сентябрь 1830</td><td data-label="Что из него следует">отец — Яков Иванов</td><td data-label="Где хранится">ЦГА Москвы, ф. 203, оп. 745, д. 1330</td></tr>
+    <tr><td data-label="Документ">Запись о браке</td><td data-label="Когда">1889</td><td data-label="Что из него следует">Иван Никитин Медков и Анна, дочь Адриана Матвеева</td><td data-label="Где хранится">ЦГА Москвы, ф. 203, оп. 780, д. 488</td></tr>
+    <tr><td data-label="Документ">Метрики о рождении детей Ивана Никитина</td><td data-label="Когда">1891, 1893, 1895, 1897, 1904</td><td data-label="Что из него следует">Любовь, Надежда, Вера, Сергий, Алексей</td><td data-label="Где хранится">ЦГА Москвы, ф. 203, оп. 780, дд. 2042, 2060, 2070, 2088, 3219</td></tr>
+    <tr><td data-label="Документ">Метрики Федоровского прихода</td><td data-label="Когда">1869, 1872, 1894, 1904</td><td data-label="Что из него следует">Симеон, Феодосия, их брак, Елизавета</td><td data-label="Где хранится">ЦГАМО ф. 8926, оп. 1, дд. 228, 229; ЦГА Москвы, ф. 203, оп. 780, д. 2063 и том 1904 г.</td></tr>
+    <tr><td data-label="Документ">Список призыва, наградной лист</td><td data-label="Когда">1941–1945</td><td data-label="Что из него следует">Сергей Иванович Медков, 1897, Ханево</td><td data-label="Где хранится">ЦАМО (через «Память народа»)</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Нестыковки в документах</h2>
+<ul>
+  <li><b>Место рождения Сергея Ивановича.</b> Один индекс ВОВ называет местом рождения с. Ханево, наградная картотека — Шаховской район. Метрика 1897 года — Юренево (с 1929 года Шаховской район). В Ханеве в 1897 году Сергий у Медковых не родился. Скорее всего, в индексе с Ханевом указано место жительства в 1941 году. Различить могли бы документы о переезде семьи в Ханево (1910–1930-е).</li>
+  <li><b>Возраст Ивана Никитича.</b> В 1865 году ему 3 года (рождение около 1862), при браке в 1889 году — 25 лет (около 1864). Метрик Волоколамского уезда за 1863–1870 годы в ЦГА Москвы нет.</li>
+  <li><b>Афонасий Карпович.</b> По ревизии 1816 года он «переведён в Смоленскую губернию Гжатской округи в деревню Федотову в 1815 году», но в ведомостях 1819–1835 годов снова живёт в Юреневе. В 1835 году его племянники записаны «внуками».</li>
+  <li><b>Дата призыва Сергея Ивановича.</b> Список призыва Волоколамского РВК — 3 сентября 1941 года, именной список запасного полка 1943 года — 6 августа 1941 года; в наградном листе «на фронте с августа 1941».</li>
+  <li><b>Мать Феодосии Христофоровны</b> в разных записях — «Надежда Гавриловна» и «Надежда Ивановна».</li>
+</ul>
+
+<h2>Где искали и не нашли</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Охват поиска; при необходимости прокручивается"><table>
+  <thead><tr><th scope="col">Где</th><th scope="col">Что искали</th><th scope="col">Почему это ещё не ответ</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Где">ЦГАМО ф. 8926 (Ярополецкий ЗАГС), 1918–1926</td><td data-label="Что искали">старших братьев или сестру Николая; брак Сергея и Лизы</td><td data-label="Почему это ещё не ответ">опись кончается 1926 годом; Николай (1928) — старший ребёнок, так что до 1926 года детей и не ожидалось; Кульпинского ЗАГС 1920-х онлайн нет</td></tr>
+    <tr><td data-label="Где">«Память народа»</td><td data-label="Что искали">братьев Медковых Сергеевичей 1916–1928 г. р.</td><td data-label="Почему это ещё не ответ">подходящих нет; братья, вероятно, моложе Николая и в войну не служили</td></tr>
+    <tr><td data-label="Где">Ревизии 1834, 1850, 1858 годов</td><td data-label="Что искали">часть Юренева, принадлежавшую Смирнову</td><td data-label="Почему это ещё не ответ">сказки помещиков на буквы С–Я за 1834 год и сказки 1850–1858 годов онлайн не выложены</td></tr>
+    <tr><td data-label="Где">Ревизии 1795 и 1782 годов</td><td data-label="Что искали">Карпа, отца Ивана Карповича</td><td data-label="Почему это ещё не ответ">в ЦГА Москвы их нет; ревизии XVIII века хранятся в РГАДА (ф. 350)</td></tr>
+    <tr><td data-label="Где">Метрики 1863–1870 годов</td><td data-label="Что искали">рождение Ивана Никитича</td><td data-label="Почему это ещё не ответ">по Волоколамскому уезду в ЦГА Москвы не сохранились или не поступали; исповедные ведомости 1863 и 1864 годов не оцифрованы</td></tr>
+    <tr><td data-label="Где">Метрики 1831–1832 годов</td><td data-label="Что искали">детей старшего Якова</td><td data-label="Почему это ещё не ответ">найдена дочь Праскева (1832); сын Иаков, рождённый 29.04.1831 у «Иакова Иванова», не отнесён ни к одному из братьев</td></tr>
+  </tbody>
+</table></div>
+
+<h2>Что можно сделать дальше</h2>
+<h3>В семье</h3>
+<ul>
+  <li>Свидетельства о рождении Николая и его братьев, военный билет или удостоверение офицера Николая (там будут части и годы службы в Германии и Беларуси), свидетельство о браке Сергея и Лизы. Девичья фамилия Лизы в любом из этих документов сразу проверит гипотезу о Филипповых.</li>
+</ul>
+<h3>Запросить в архивах</h3>
+<ul>
+  <li><b>Главное управление ЗАГС Московской области (архив):</b> актовая запись о рождении Николая Сергеевича Медкова, 19.12.1928, Шаховской (или Волоколамский) район; запись о браке Медкова Сергея Ивановича и Елизаветы Семёновны, около 1926–1928.</li>
+  <li><b>ЦГА Москвы, читальный зал:</b> ревизские сказки 1850 и 1858 годов по Волоколамскому уезду (крестьяне М. А. Смирнова, сельцо Юренево); ф. 203, оп. 780, д. 366 и следующие (метрики с 1871 года — Ново-Никольское).</li>
+  <li><b>РГАДА, ф. 350:</b> ревизия 1795 (и 1782) года по Волоколамскому уезду, вотчина Зариных (сельцо Юренево) — для поколения Карпа.</li>
+</ul>
+
+<h2 id="sources">Источники</h2>
+<ol class="src">
+  <li id="source-a0001"><b>Список призыва Волоколамского РВК</b>, строка 229: Медков Сергей Иванович, 1897, с. Ханево, призван 3.09.1941. ЦАМО. <a href="https://pamyat-naroda.ru">pamyat-naroda.ru</a> <span class="imgref"><a href="#doc-a0001">к изображению</a><a class="lb" href="artifacts/A-0001_volokolamsk-rvk-1943_row229_crop.png" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0001_volokolamsk-rvk-1943_p345_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0002"><b>Наградной лист</b>, медаль «За боевые заслуги», апрель 1945, 13 гв. абр РГК. ЦАМО. <a href="https://pamyat-naroda.ru">pamyat-naroda.ru</a> <span class="imgref"><a href="#doc-a0002">к изображению</a><a class="lb" href="artifacts/A-0002_award_fields.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0002_award-sheet-1945_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0034"><b>Ревизская сказка 1811 г.</b>, сельцо Юренево М. Г. Зарина, семья 7. ЦГА Москвы, ф. 51, оп. 8, д. 11, сканы 599–600. <a href="https://ya.ru/archive/catalog/38b46d1b-3b4a-4aac-a439-b55117384d91/599">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0034">к изображению</a><a class="lb" href="artifacts/A-0034_revizia1811_Afonasei_Ivan_Karpovy.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0034_revizia1811_d11_scan599_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0027"><b>Ревизская сказка 1816 г.</b>, сельцо Юренево М. Г. Зарина, семья 6. ЦГА Москвы, ф. 51, оп. 8, д. 78, скан 224. <a href="https://ya.ru/archive/catalog/39ea186b-1171-4fdd-9941-9c03c02560e2/224">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0027">к изображению</a><a class="lb" href="artifacts/A-0027_revizia1816_semya6_muzh.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0027_revizia1816_d78_scan224_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0029"><b>Исповедная ведомость 1819 г.</b>, вотчина М. Г. Зарина, двор 160. ЦГА Москвы, ф. 207, оп. 1, д. 3019, скан 17. <a href="https://ya.ru/archive/catalog/9e43d0fd-1f92-4d73-a49c-74797ce57ffc/17">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0029">к изображению</a><a class="lb" href="artifacts/A-0029_ispoved1819_Yurenevo_dvor160_Karpovy.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0029_ispoved1819_f207_d3019_scan17_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0032"><b>Метрическая книга Троицкой ц. с. Никольского, 1830</b>, рождения, № 122 (Никита). ЦГА Москвы, ф. 203, оп. 745, д. 1330, скан 755. <a href="https://ya.ru/archive/catalog/6ab2a20b-a000-48d4-9608-65caca1c4d43/755">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0032">к изображению</a><a class="lb" href="artifacts/A-0032_MK1830_Nikita_birth.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0032_MK1830_d1330_scan755_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0030"><b>Исповедная ведомость 1835 г.</b>, Юренево, двор 168. ЦГА Москвы, ф. 203, оп. 747, д. 1263, скан 700. <a href="https://ya.ru/archive/catalog/d5b22379-7c7a-4806-bb55-05a4dec94361/700">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0030">к изображению</a><a class="lb" href="artifacts/A-0030_ispoved1835_Yurenevo_dvor168.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0030_ispoved1835_d1263_scan700_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0028"><b>Исповедная ведомость 1862 г.</b>, Юренево г-на Смирнова, дворы 181–182. ЦГА Москвы, ф. 203, оп. 747, д. 1842, скан 876. <a href="https://ya.ru/archive/catalog/983c6c00-f816-47ee-8b9e-4bd71644b919/876">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0028">к изображению</a><a class="lb" href="artifacts/A-0028_ispoved1862_Yurenevo_dvory181-182.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0028_ispoved1862_d1842_scan876_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0035"><b>Исповедная ведомость 1865 г.</b>, Юренево г-на Смирнова, двор 193. ЦГА Москвы, ф. 203, оп. 747, д. 1901, скан 846. <a href="https://ya.ru/archive/catalog/213f48dd-f2ba-4d0c-9f73-dca1ad7b98e0/846">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0035">к изображению</a><a class="lb" href="artifacts/A-0035_ispoved1865_Yurenevo_dvor193.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0035_ispoved1865_d1901_scan846_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0036"><b>Метрическая книга Воскресенской ц. с. Раменье, 1889</b>, браки, № 19. ЦГА Москвы, ф. 203, оп. 780, д. 488, скан 208. <a href="https://ya.ru/archive/catalog/a8f2df53-6789-4369-a654-3815e692e87c/208">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0036">к изображению</a><a class="lb" href="artifacts/A-0036_MK1889_brak_Ivan_Nikitin_Medkov.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0036_MK1889_d488_scan208_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0005"><b>Метрическая книга Троицкой ц. с. Никольского, 1897</b>, рождения, № 19 (Сергий); там же 1891, 1893, 1895 (Любовь, Надежда, Вера). ЦГА Москвы, ф. 203, оп. 780, дд. 2088 (скан 232), 2042, 2060, 2070. <a href="https://ya.ru/archive/catalog/8d59f2e5-0761-4a1c-9df7-95e182262fd4/232">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0005">к изображению</a><a class="lb" href="artifacts/A-0005_novonikolskoe-1897_scan232_entry19_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0005_novonikolskoe-1897_d2088_scan232_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0011"><b>Метрическая книга Скорбященской ц. с. Федоровского, 1904</b>, рождения, № 58 (Елизавета). ЦГА Москвы, ф. 203, оп. 780 (том 1904 г.), скан 304. <span class="imgref"><a href="#doc-a0011">к изображению</a><a class="lb" href="artifacts/A-0011_fedorovskoe-1904_scan304_elizaveta_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0011_fedorovskoe-1904_scan304_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0014"><b>Решение городского суда, 2013 год</b> (наследство). Номер дела хранится в материалах исследования.</li>
+  <li id="source-a0021"><b>Метрическая книга Скорбященской ц. с. Федоровского, 1894</b>, браки, № 31. ЦГА Москвы, ф. 203, оп. 780, д. 2063, скан 284; копия ЦГАМО ф. 8926, оп. 1, д. 233. <span class="imgref"><a href="#doc-a0021">к изображению</a><a class="lb" href="artifacts/A-0021_fedorovskoe-1894_scan284_marriage31_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0021_fedorovskoe-1894_d2063_scan284_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0025"><b>Метрическая книга Федоровского прихода, 1869</b>, рождения, № 4 (Симеон). ЦГАМО, ф. 8926, оп. 1, д. 228, скан 286. <span class="imgref"><a href="#doc-a0025">к изображению</a><a class="lb" href="artifacts/A-0025_fedorovskoe-1869_scan286_simeon_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0025_fedorovskoe-186x_cgamo8926-1-228_scan286_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0026"><b>Метрическая книга Федоровского прихода, 1872</b>, рождения, № 31 (Феодосия). ЦГАМО, ф. 8926, оп. 1, д. 229, скан 139. <span class="imgref"><a href="#doc-a0026">к изображению</a><a class="lb" href="artifacts/A-0026_fedorovskoe-1872_scan139_feodosia_crop.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0026_fedorovskoe-1872_cgamo8926-1-229_scan139_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+  <li id="source-a0037"><b>Метрическая книга Скорбященской ц. с. Федоровского, 1856</b>, рождения, № 52 (крёстная Матрона Тимофеева). ЦГА Москвы, ф. 203, оп. 745, д. 1970, скан 812. <a href="https://ya.ru/archive/catalog/ad3a421e-a23f-4a96-a34d-ced66e8d36eb/812">ya.ru/archive</a> <span class="imgref"><a href="#doc-a0037">к изображению</a><a class="lb" href="artifacts/A-0037_MK1856_Matrona_Timofeeva_kryostnaya.jpg" data-cap="Вырезка">вырезка</a><a class="lb" href="artifacts/full/A-0037_MK1856_d1970_scan812_full.jpg" data-cap="Полный разворот">скан</a></span></li>
+</ol>
+<p class="small">Полные сканы всех перечисленных листов сохранены в папке дела artifacts/full, вырезки — в artifacts. Реестры лиц, документов, утверждений и связей и журнал поиска ведутся в CSV-файлах дела. Выводы о Лизе и о тождестве Сергея Ивановича изменятся, если найдутся записи ЗАГС 1926–1928 годов. О живых родственниках собраны только имена и степень родства; адреса, участки и данные других участников судебного дела в отчёт не включены.</p>
+
+</main>
+<footer class="report-footer"><span>Дело «Медковы из Юренева», 2026</span><a href="#top">К началу ↑</a></footer>
+</div>
+<div id="lb" class="lb-overlay" hidden role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+  <div class="lb-bar"><span id="lb-cap"></span><button type="button" id="lb-zoom">Крупнее</button><button type="button" id="lb-close">Закрыть</button></div>
+  <div class="lb-stage" id="lb-stage"><img id="lb-img" alt=""></div>
+</div>
+<script>
+(function(){var o=document.getElementById('lb'),img=document.getElementById('lb-img'),st=document.getElementById('lb-stage'),z=document.getElementById('lb-zoom'),c=document.getElementById('lb-cap'),x=document.getElementById('lb-close'),last=null;
+function open(a){last=a;img.src=a.getAttribute('href');img.alt=a.getAttribute('data-cap')||'';c.textContent=a.getAttribute('data-cap')||'';st.classList.remove('zoom');z.textContent='Крупнее';o.hidden=false;document.documentElement.style.overflow='hidden';x.focus();}
+function close(){o.hidden=true;img.removeAttribute('src');document.documentElement.style.overflow='';if(last)last.focus();}
+function zoom(){var on=st.classList.toggle('zoom');z.textContent=on?'Вписать':'Крупнее';}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.lb');if(a){e.preventDefault();open(a);}});
+x.addEventListener('click',close);z.addEventListener('click',zoom);img.addEventListener('click',zoom);
+o.addEventListener('click',function(e){if(e.target===o||e.target===st)close();});
+document.addEventListener('keydown',function(e){if(!o.hidden&&e.key==='Escape')close();});})();
+</script>
+
+
+</body>
+</html>
